@@ -16,24 +16,7 @@ export class ViewComponent implements OnInit {
   constructor ( private web3service: Web3Service, private route: Router ) { }
 
   ngOnInit() {
-    this.web3service.Web3Details$.subscribe( async ( data: Web3Model ) => {
-      this.account = data.account
-      this.res = data.reshoster
-      await this.loadData()
-    } )
-
-  }
-  // load resume
-  loadData = async () => {
-    try {
-      this.data = JSON.parse( await this.res.
-        Resume( sessionStorage.getItem( 'key' ) ).
-        call( { from: this.account } )
-      )
-    } catch ( error ) {
-      alert( 'No Resume Found!!' )
-      this.route.navigateByUrl( '/' )
-    }
+    this.data = JSON.parse( sessionStorage.getItem( 'data' ) )
   }
 
 }
