@@ -1,0 +1,94 @@
+<app-main-nav [ContentType]="0">
+  <div class="startSection">
+    <div class="flex-container">
+      <mat-grid-list class="home" cols="2" rowHeight="2:2">
+        <div>
+          <mat-grid-tile class="contentPart">
+            <h3>Resume Generator</h3>
+
+          </mat-grid-tile>
+        </div>
+
+        <div>
+
+          <mat-grid-tile>
+
+            <div>
+              <form (ngSubmit)="search()">
+                <table class="fullwidth" cellspacing="25">
+                  <tr>
+                    <td>
+                      <mat-form-field class="fullwidth">
+                        <input matInput type="text" placeholder="Public Key" name="publicKey" [(ngModel)]="publicKey" />
+                      </mat-form-field>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p>
+                        <button class="searchBtn" color="primary" value="submit" mat-raised-button>
+                          Search Resume
+                        </button>
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </mat-grid-tile>
+        </div>
+      </mat-grid-list>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <mat-grid-list class="home" cols="2" rowHeight="2:1">
+    <mat-grid-tile>
+      <div>
+        <button mat-raised-button color="primary" routerLink="/user">
+          Login
+        </button>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <form (ngSubmit)="search()">
+        <table class="fullwidth" cellspacing="25">
+          <tr>
+            <td>
+              <mat-form-field class="fullwidth">
+                <input
+                  matInput
+                  type="text"
+                  placeholder="Public Key"
+                  name="publicKey"
+                  [(ngModel)]="publicKey"
+                />
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p>
+                <button color="primary" value="submit" mat-raised-button>
+                  Search Resume
+                </button>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </mat-grid-tile>
+  </mat-grid-list> -->
+  </div>
+</app-main-nav>

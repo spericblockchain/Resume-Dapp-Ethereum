@@ -1,0 +1,96 @@
+<div id="wrapper">
+  <!-- <div class="wrapper-top"></div> -->
+  <div class="wrapper-mid">
+    <!-- Begin Paper -->
+    <div id="paper">
+      <!-- <div class="paper-top"></div> -->
+      <div id="paper-mid">
+        <div class="entry">
+          <!-- Begin Personal Information -->
+          <div class="self">
+            <h1 class="name">{{data.name}}</h1>
+            <ul>
+              <li class="ad">{{data.address}}</li>
+              <li class="mail">{{data.email}}</li>
+              <li class="tel">{{data.tel}}</li>
+              <li class="tel">Born on {{data.dob}}</li>
+            </ul>
+          </div>
+          <!-- End Personal Information -->
+        </div>
+        <!-- Begin 1st Row -->
+        <div class="entry">
+          <h2>OBJECTIVE</h2>
+          <p>{{data.objective}}</p>
+        </div>
+        <!-- End 1st Row -->
+        <!-- Begin 2nd Row -->
+        <div class="entry">
+          <h2>EDUCATION</h2>
+
+          <table>
+            <tr>
+              <th>College Name</th>
+              <th>Year of Passout</th>
+              <th>Stream</th>
+            </tr>
+            <tr *ngFor="let edu of data.education">
+              <td>{{edu.edu1}}</td>
+              <td>{{edu.edu2}}</td>
+              <td>{{edu.edu3}}</td>
+            </tr>
+          </table>
+        </div>
+
+
+        <!-- End 2nd Row -->
+        <!-- Begin 3rd Row -->
+        <div class="entry">
+          <h2>EXPERIENCE</h2>
+          <table>
+            <tr>
+              <th>Position</th>
+              <th>Company Name </th>
+              <th>Year of Experience</th>
+            </tr>
+            <tr *ngFor="let edu of data.experience">
+              <td>{{edu.exp1}}</td>
+              <td>{{edu.exp2}}</td>
+              <td>{{edu.exp3}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="entry">
+          <h2>PROJECTS</h2>
+          <table>
+            <tr>
+              <th>Project Name</th>
+              <th>Project Description</th>
+              <th>Used Skill</th>
+            </tr>
+            <tr *ngFor="let edu of data.projects">
+              <td>{{edu.pro1}}</td>
+              <td>{{edu.pro2}}</td>
+              <td>{{edu.pro3}}</td>
+            </tr>
+          </table>
+        </div>
+        <!-- End 2nd Row -->
+        <!-- Begin 4th Row -->
+        <div class="entry">
+          <h2>SKILLS</h2>
+          <div class="content">
+            <!-- <h3>Software Knowledge</h3> -->
+            <ul class="skills">
+              <li *ngFor="let skill of data.skill">{{skill.name}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="paper-bottom"></div>
+    </div>
+    <!-- End Paper -->
+  </div>
+  <!-- <div class="wrapper-bottom"></div> -->
+</div>
